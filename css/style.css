@@ -9,7 +9,6 @@ body {
   font-size: 18px;
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
 }
 
 *:focus {
@@ -518,6 +517,15 @@ button:hover {
   z-index: 9;
 }
 
+.accordion {
+  width: 80px;
+  margin-left: 87.1%;
+  overflow-y: hidden;
+  transition: max-height 0.2s linear;
+  z-index: 9999;
+  position: absolute;
+}
+
 .form-btn {
   width: 60%;
   border: 0;
@@ -534,6 +542,11 @@ button:hover {
   position: relative;
   z-index: 9;
 }
+
+.hidden {
+  max-height: 32px;
+}
+
 
 @media screen and (max-width: 900px) {
   .portfolio__photo {
@@ -573,9 +586,14 @@ button:hover {
   }
 
   .accordion {
-    display: none;
+    margin-left: 45%;
+  }
+
+  .hidden {
+    max-height: 28px;
   }
 }
+
 
 @media screen and (max-width: 750px) {
   body {
@@ -749,6 +767,7 @@ button:hover {
 .navigation__menu {
   list-style-type: none;
   padding-left: 0;
+  left: 0;
   margin-top: -0.2%;
 }
 
@@ -772,13 +791,3 @@ button:hover {
     background-color: #C5C5C5;
 }
 
-.hidden {
-  max-height: 32px;
-}
-
-.accordion {
-  width: 80px;
-  margin-left: 87.1%;
-  overflow-y: hidden;
-  transition: max-height 0.2s linear;
-}
